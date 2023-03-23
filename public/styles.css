@@ -1,0 +1,14 @@
+.card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black
+}
+h1 {
+    color: red
+}
+
+#grid {
+    display: grid;
+    justify-content: center;
+    margin:auto;
+}
