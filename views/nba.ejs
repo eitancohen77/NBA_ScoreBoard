@@ -10,9 +10,16 @@
 <body>
     <h1>NBA Games Today</h1>
     <div id="grid">
+
+
         <% for (let o of output) { %>
             <div class="card">
-                <p> <%= o %> </p>
+                <div id="home_team">
+                    <img  src="<%=renderImage(o[0])%>" alt="">
+                </div>
+                <div id="away_team">
+                    <img src="<%=renderImage(o[1])%>" alt="">
+                </div>
             </div>
         <% } %> 
     </div>

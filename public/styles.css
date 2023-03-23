@@ -1,14 +1,36 @@
 .card {
-    width: 200px;
+    width: 300px;
     height: 200px;
-    border: 1px solid black
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 60px;
+    display:flex;
+    transition: background-color 0.15s, transform 0.15s;
 }
-h1 {
-    color: red
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+
+img {
+    width: 150px;
+    height: 200px;
 }
 
 #grid {
-    display: grid;
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-content: center;
-    margin:auto;
+}
+
+#home_team {
+    width: 50%;
+    height: 100%;
+}
+#away_team {
+    width: 50%;
+    height: 100%;
 }
