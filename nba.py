@@ -20,10 +20,10 @@ games = data['scoreboard']['games']
 is_active = ''
 counter = 0
 for i in games:
-    home_score = 0
-    away_score = 0
     home_team_name = i['homeTeam']['teamTricode']
     away_team_name = i['awayTeam']['teamTricode']
+    home_team_score = i['homeTeam']['score']
+    away_team_score = i['awayTeam']['score']
     """ home_score = i['homeTeam']['score']
     away_score = i['awayTeam']['score']
     if (i['gameStatusText'] != 'Final'):
@@ -32,7 +32,12 @@ for i in games:
         is_active = ''
     array.append(home_team_name + ' has ' + str(home_score) + ' points, while the ' + str(away_team_name) + ' have ' + str(away_score) + str(is_active))"""
 
-    array.append([home_team_name, away_team_name])
+    array.append({
+        'home_team': home_team_name, 
+        'home_score': home_team_score,
+        'away_team': away_team_name,
+        'away_score': away_team_score
+        })
     counter += 1
 input = sys.argv[1]
 output = array

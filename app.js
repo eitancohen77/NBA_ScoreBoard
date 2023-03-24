@@ -66,13 +66,13 @@ function render_image(team_name) {
     } else if (team_name === 'POR') {
         return 'https://loodibee.com/wp-content/uploads/nba-portland-trail-blazers-logo.png'
     } else if (team_name === 'SAC') {
-        return 'https://loodibee.com/wp-content/uploads/nba-sacramento-kings.png'
+        return 'https://loodibee.com/wp-content/uploads/nba-sacramento-kings-logo.png'
     } else if (team_name === 'SAS') {
         return 'https://loodibee.com/wp-content/uploads/nba-san-antonio-spurs-logo.png'
     } else if (team_name === 'TOR') {
-        return 'https://loodibee.com/wp-content/uploads/nba-portland-toronto-raptors-logo.png'
+        return 'https://loodibee.com/wp-content/uploads/nba-toronto-raptors-logo.png'
     } else if (team_name === 'UTA') {
-        return 'https://loodibee.com/wp-content/uploads/nba-utah-jazz.png'
+        return 'https://loodibee.com/wp-content/uploads/nba-utah-jazz-logo.png'
     } else if (team_name === 'WAS') {
         return 'https://loodibee.com/wp-content/uploads/nba-washington-wizards-logo.png'
     }
@@ -80,6 +80,7 @@ function render_image(team_name) {
 python_process.stdout.on('data', (data) => {
     // An array that contains all the json information
     const output = JSON.parse(data)
+    console.log(output)
 
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');

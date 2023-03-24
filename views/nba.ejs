@@ -9,16 +9,25 @@
 </head>
 <body>
     <h1>NBA Games Today</h1>
+    <div id="nba_logo_grid">
+        <img id="nba_logo" src="https://pngimg.com/uploads/nba/nba_PNG14.png" alt="">
+    </div>
     <div id="grid">
 
 
         <% for (let o of output) { %>
             <div class="card">
                 <div id="home_team">
-                    <img  src="<%=renderImage(o[0])%>" alt="">
+                    <div class="team_image">
+                        <img src="<%=renderImage(o['home_team'])%>" alt="">
+                    </div>
+                    <div class="score"><%=o['home_score']%></div>
                 </div>
                 <div id="away_team">
-                    <img src="<%=renderImage(o[1])%>" alt="">
+                    <div class="team_image">
+                        <img src="<%=renderImage(o['away_team'])%>" alt="">
+                    </div>            
+                    <div class="score"><%=o['away_score']%></div>
                 </div>
             </div>
         <% } %> 
