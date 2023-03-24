@@ -11,7 +11,7 @@
 
 .card:hover {
     transform: scale(1.1);
-    background-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.63);
 }
 
 #nba_logo_grid {
@@ -40,7 +40,7 @@ img {
 }
 
 .card:hover .team_image{
-    opacity: 0;
+    opacity: 0.1;
     transition: 0.15s;
 }
 
@@ -67,4 +67,13 @@ img {
     opacity: 1;
     color: white;
     transition: 0.15s
+}
+
+.live img {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    margin-left: 60px;
+    margin-top: -50px;
+    opacity: 0.7;
 }
