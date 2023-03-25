@@ -10,4 +10,4 @@ https://user-images.githubusercontent.com/98838116/227679865-a9e34ba1-3305-4d90-
 # How its Made:
 Tech used: HTML, CSS, JavaScript, Python, express, Node.
 
-Using a GitHub API for the NBA, I was able to retrieve real-time data for ongoing games. By leveraging Python, I extracted the data and passed it to a JavaScript file for organization and packaging purposes, ultimately making it ready for the EJS file.
+Using a [GitHub API for the NBA](https://github.com/swar/nba_api), I was able to retrieve real-time data for ongoing games. By leveraging Python, I extracted the data and passed it to a JavaScript file for organization and packaging purposes, ultimately making it ready for the EJS file.
