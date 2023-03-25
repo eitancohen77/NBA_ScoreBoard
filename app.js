@@ -80,7 +80,8 @@ function render_image(team_name) {
 python_process.stdout.on('data', (data) => {
     // An array that contains all the json information
     const output = JSON.parse(data)
-
+    console.log(output)
+    
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
     

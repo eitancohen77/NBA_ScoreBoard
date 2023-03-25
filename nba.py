@@ -24,6 +24,8 @@ for i in games:
     away_team_name = i['awayTeam']['teamTricode']
     home_team_score = i['homeTeam']['score']
     away_team_score = i['awayTeam']['score']
+    game_status = i['gameStatus']
+    game_start_time = i['gameStatusText']
     """ home_score = i['homeTeam']['score']
     away_score = i['awayTeam']['score']
     if (i['gameStatusText'] != 'Final'):
@@ -31,8 +33,9 @@ for i in games:
     else:
         is_active = ''
     array.append(home_team_name + ' has ' + str(home_score) + ' points, while the ' + str(away_team_name) + ' have ' + str(away_score) + str(is_active))"""
-
     array.append({
+        'game_status': game_status,
+        'game_start_time': game_start_time,
         'home_team': home_team_name, 
         'home_score': home_team_score,
         'away_team': away_team_name,
