@@ -14,29 +14,31 @@
     <div id="grid">
 
 
-        <% for (let o of output) { %>
+        <% for (let game of output) { %>
             <div class="card">
                 <div id="home_team">
                     <div class="team_image">
-                        <img src="<%=renderImage(o['home_team'])%>" alt="">
+                        <img src="<%=renderImage(game['home_team'])%>" alt="">
                     </div>
-                    <% if (o['game_status'] === 2) { %>
-                        <div class="score"><%=o['home_score']%></div>
+                    <% if (game['game_status'] >= 2) { %>
+                        <div class="score"><%=game['home_score']%></div>
                     <% } %>
             
                 </div>
                 <div id="away_team">
                     <div class="team_image">
-                        <img src="<%=renderImage(o['away_team'])%>" alt="">
+                        <img src="<%=renderImage(game['away_team'])%>" alt="">
                     </div>                   
                     
-                    <% if (o['game_status'] === 2) { %>
+                    <% if (game['game_status'] === 2) { %>
                         <div class="live">
                             <img src="/pictures/live_button.png" alt="">
                         </div> 
-                        <div class="score"><%=o['away_score']%></div>
-                    <% } else if (o['game_status'] === 1) { %>
-                        <div id="game_time"><%=o['game_start_time']%></div>
+                    <% } else if (game['game_status'] === 1) { %>
+                        <div id="game_time"><%=game['game_start_time']%></div>
+                    <% } %>
+                    <% if (game['game_status'] >= 2) { %>
+                        <div class="score"><%=game['away_score']%></div>
                     <% } %>
                 </div>
             </div>
